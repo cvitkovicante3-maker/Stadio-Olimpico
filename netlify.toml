@@ -1,0 +1,19 @@
+[[headers]]
+  for = "/*.br"
+  [headers.values]
+    Content-Encoding = "br"
+    # Ensure the browser treats it as the original type
+    Content-Type = "application/octet-stream" 
+
+# Specific overrides for common WebGL types
+[[headers]]
+  for = "/*.wasm.br"
+  [headers.values]
+    Content-Encoding = "br"
+    Content-Type = "application/wasm"
+
+[[headers]]
+  for = "/*.js.br"
+  [headers.values]
+    Content-Encoding = "br"
+    Content-Type = "application/javascript"
